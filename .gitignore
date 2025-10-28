@@ -1,0 +1,23 @@
+# Backup files
+*.backup*
+*.bak
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temp files
+*.tmp
+temp/
+tmp/
+
+# Local overrides (if needed)
+*.local.md
