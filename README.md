@@ -152,13 +152,17 @@ Agent prompt and instructions...
 Many agents require specialized tools. Install them using:
 
 ```bash
-# Run the installation script
+# Run the installation script (recommended)
 ./install-dev-tools.sh
 
 # Or install via Homebrew (macOS)
 brew install jq yq fd ripgrep ast-grep semgrep gitleaks \
   trufflehog hadolint shellcheck yamllint tfsec syft grype \
-  httpie dive lazydocker tokei hyperfine git-delta lazygit
+  httpie dive lazydocker tokei cloc pgcli vegeta \
+  hyperfine git-delta lazygit mitmproxy pandoc vale
+
+# usql requires a custom tap
+brew install xo/xo/usql
 ```
 
 See [INSTALL-TOOLS.md](INSTALL-TOOLS.md) for detailed installation instructions.
