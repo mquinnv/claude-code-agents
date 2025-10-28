@@ -317,7 +317,14 @@ main() {
         install_package "lazydocker" "$OS"
         install_package "mitmproxy" "$OS"
         install_package "pgcli" "$OS"
-        install_package "usql" "$OS"
+
+        # usql requires custom tap
+        if command_exists "usql"; then
+            print_success "usql already installed"
+        else
+            print_info "Installing usql from custom tap..."
+            execute brew install xo/xo/usql
+        fi
     else
         # Linux - some from repos, some from GitHub
 

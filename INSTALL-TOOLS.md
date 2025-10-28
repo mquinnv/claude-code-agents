@@ -117,8 +117,11 @@ If the script fails or you prefer manual installation:
 ```bash
 brew install jq yq fd ripgrep ast-grep semgrep gitleaks \
   trufflehog hadolint shellcheck yamllint tfsec syft grype \
-  httpie dive lazydocker tokei cloc pgcli usql vegeta \
+  httpie dive lazydocker tokei cloc pgcli vegeta \
   hyperfine git-delta lazygit mitmproxy pandoc vale
+
+# usql requires a custom tap
+brew install xo/xo/usql
 ```
 
 ### Via apt (Ubuntu/Debian)
