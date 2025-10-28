@@ -8,21 +8,32 @@ This repository contains 39+ specialized agent definitions that extend Claude Co
 
 ## Quick Start
 
+**New users:** See [QUICKSTART.md](QUICKSTART.md) for a complete setup guide.
+
 ### Installation
 
 1. **Clone this repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/mquinnv/claude-code-agents.git
    cd claude-code-agents
    ```
 
-2. **Copy agents to your Claude Code directory:**
+2. **Install recommended tools:**
+   ```bash
+   ./install-dev-tools.sh
+   ```
+
+3. **Add tool permissions to Claude Code:**
+   ```bash
+   ./add-tool-permissions.sh
+   ```
+
+4. **Copy agents to your Claude Code directory:**
    ```bash
    cp *.md ~/.claude/agents/
    ```
 
-3. **Install recommended tools:**
-   See [INSTALL-TOOLS.md](INSTALL-TOOLS.md) for the installation script
+See [INSTALL-TOOLS.md](INSTALL-TOOLS.md) for detailed installation instructions.
 
 ### Using Agents
 
@@ -234,6 +245,16 @@ Changes take effect immediately.
 ### With Claude Code Settings
 
 Add tool permissions to `~/.claude/settings.local.json`:
+
+```bash
+# Automatically add all tool permissions
+./add-tool-permissions.sh
+
+# Preview changes first
+./add-tool-permissions.sh --dry-run
+```
+
+Or manually edit `~/.claude/settings.local.json`:
 
 ```json
 {
